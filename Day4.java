@@ -37,14 +37,14 @@ public class InPlaceMerge {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter elements of arr1 (space-separated): ");
+        System.out.print("Enter elements of arr1 : ");
         String line1 = sc.nextLine().trim();
         line1 = line1.replace("arr1 =", "").replace("[", "").replace("]", "").trim();
         int[] arr1 = Arrays.stream(line1.split("\\s+|,"))
                            .filter(s -> !s.isEmpty())
                            .mapToInt(Integer::parseInt)
                            .toArray();
-        System.out.print("Enter elements of arr2 (space-separated): ");
+        System.out.print("Enter elements of arr2: ");
         String line2 = sc.nextLine().trim();
         line2 = line2.replace("arr2 =", "").replace("[", "").replace("]", "").trim();
         int[] arr2 = Arrays.stream(line2.split("\\s+|,"))
